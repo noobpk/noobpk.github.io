@@ -1,4 +1,3 @@
-console.log('%c A Product developed by Noobteam Inc.', 'background: #222; color: #bada55');
 (function($) {
 
 	'use strict';

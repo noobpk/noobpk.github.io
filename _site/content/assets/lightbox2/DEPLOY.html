@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to Make a Release | noobpk.github.io</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to Make a Release" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/content/assets/lightbox2/DEPLOY.html" />
+<meta property="og:url" content="http://localhost:4000/content/assets/lightbox2/DEPLOY.html" />
+<meta property="og:site_name" content="noobpk.github.io" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/content/assets/lightbox2/DEPLOY.html","headline":"How to Make a Release","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=df8f2f4059998d1724709ac55e0babbc8b35694e">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">noobpk.github.io</a></h1>
+      
+
+      <h2 id="how-to-make-a-release">How to Make a Release</h2>
+
+<h3 id="build">Build</h3>
+<ul>
+  <li><strong>Checkout dev branch.</strong> This will contain work queued up for the next release.</li>
+  <li><strong>Update version number.</strong> Manually update version number in <code class="highlighter-rouge">src/lightbox.js</code> and <code class="highlighter-rouge">package.json</code>. Don’t use <code class="highlighter-rouge">npm version</code>.</li>
+  <li><strong><code class="highlighter-rouge">grunt build</code>.</strong> Make sure you have run <code class="highlighter-rouge">bower install</code> ahead of this as it will pull down jQuery which is utilized in the build step.</li>
+  <li><strong>Merge to <code class="highlighter-rouge">master</code>.</strong> Commit changes and push to new branch. Create PR from this branch to <code class="highlighter-rouge">master</code>. Merge.</li>
+</ul>
+
+<h3 id="release">Release</h3>
+<ul>
+  <li><strong>Create tagged release.</strong> Go to <a href="https://github.com/lokesh/lightbox2/releases">Github Releases page</a>. Draft a new release. Naming convention is <code class="highlighter-rouge">v2.8.1</code>. Add notes that link to PRs.</li>
+  <li><strong><code class="highlighter-rouge">npm publish</code></strong>. No need to do anything for Bower as it is entirely based on the Github repo.</li>
+</ul>
+
+<h3 id="maintenance-and-docs">Maintenance and Docs</h3>
+<ul>
+  <li><strong>GH clean-up.</strong> Close out issues with <code class="highlighter-rouge">[status] pending release</code>.</li>
+  <li><strong>Lightbox Site.</strong> If there are any changes to the options, don’t forget to update the <a href="http://localhost:8000/dist/#options">Lightbox Site</a>. The code lives in a separate repo, <a href="https://github.com/lokesh/lightbox2-site/">lightbox2-site</a>.</li>
+</ul>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

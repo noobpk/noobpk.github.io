@@ -1,10 +1,12 @@
 body {
+  color: var(--color);
+  background-color: var(--background-color);
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.8;
-  color: #b3b3b3;
-  background: #fff;
+  /*color: #b3b3b3;*/
+  /*background: #fff;*/
 }
 img.imageresponsive {
   width: 100%;
@@ -23,7 +25,6 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5 {
-  color: #000;
   font-family: "Playfair Display", times, serif;
 }
 
@@ -455,12 +456,11 @@ main {
 }
 
 .resume-list li .date {
-  color: #000;
   opacity: .6;
 }
 
 .resume-list li h3 {
-  color: #000;
+  color: #F73859;
   font-size: 24px;
 }
 
@@ -673,7 +673,7 @@ main {
 }
 
 .custom-media h3 a {
-  color: #000;
+  
 }
 
 .custom-media h3 a:hover {
@@ -1724,4 +1724,14 @@ canvas{
   background-position: 50% 50%;
   background-repeat: no-repeat;
   position: fixed;
+}
+
+/*darkmode*/
+dark-mode-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  size: 20px;
+  --dark-mode-toggle-light-icon: url(darktheme/light.png);
+  --dark-mode-toggle-dark-icon: url(darktheme/dark.png);
 }

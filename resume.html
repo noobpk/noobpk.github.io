@@ -44,6 +44,10 @@
     <link rel="stylesheet" href="content/assets/me/css/style.css">
     <!-- Lightbox2 -->
     <link href="content/assets/lightbox2/dist/css/lightbox.css" rel="stylesheet">
+    <!-- Dark Theme -->
+    <link rel="stylesheet" href="darktheme/light.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+    <link rel="stylesheet" href="darktheme/dark.css" media="(prefers-color-scheme: dark)">
+    <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
   </head>
 
   <body>
@@ -52,6 +56,7 @@
       <a href="#" class="offcanvas-toggle js-offcanvas-toggle">Menu</a>
       <div class="offcanvas_menu" id="offcanvas_menu">
         <ul class="mb-5">
+          <dark-mode-toggle remember></dark-mode-toggle>
           <li class="active ion-planet" style="color: #F73859; font-size: 18px;"><a href="index.html"> LeThanhPhuc</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="https://medium.com/@lethanhphuc.pk" target="_blank">Blog</a></li>          
@@ -61,6 +66,8 @@
         <ul class="mb-5">
           <li class="active ion-social-github" style="color: #F73859; font-size: 18px;"><a href="https://github.com/noobpk" target="_blank"> Repo Demo</a></li>
           <li class="ion-pizza" style="font-size:18px;"><a href="show-image.html" style="font-size:16px;"> Show-image</a></li>
+          <li class="ion-pizza" style="font-size:18px;"></li>
+          <li class="ion-pizza" style="font-size:18px;"></li>
         </ul>
         <hr  width="100%" size="5px" align="center" color="#fff"/>
 
@@ -75,13 +82,13 @@
         </br>
         <hr  width="100%" size="5px" align="center" color="#F73859" /> 
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Noobteam Inc | All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <p style="color:#fff;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Noobteam Inc | All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
       </div>
       <aside style="background-image: url(content/assets/me/img/profile_lethanhphuc.jpg);"></aside>
 
       <main>      
-         <a href="index.html" class="home-button"><span class="fa fa-home"></span></a>
+        <a href="index.html" class="home-button"><span class="fa fa-home"></span></a>
         <h1 class="mb-5">Experience</h1>
         <div class="mb-5">
           <ul class="resume-list">
@@ -185,6 +192,20 @@
 
       gtag('config', 'UA-131474915-1');
     </script>
-        
+    <!-- Darkmode -->
+    <script>
+      if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
+        alert('Your browser does not support the `prefers-color-scheme` media query.');
+      }      
+      const darkModeToggle = document.querySelector('dark-mode-toggle');
+      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');              
+      darkModeMediaQuery.addListener((e) => {
+        if (e.matches) {
+          darkModeToggle.mode = 'dark';
+        } else {
+          darkModeToggle.mode = 'light';
+        }
+      });
+    </script>    
   </body>
 </html>

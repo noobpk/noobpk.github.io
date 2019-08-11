@@ -2,4 +2,5 @@ User-agent: *
 Disallow: /
 Allow: /resume.html
 Allow: /sitemap.xml
+Allow: /show-image.html
 /*What are you doing here bro - This file trust for bot not for you T~T*/

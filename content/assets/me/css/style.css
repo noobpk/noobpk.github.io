@@ -1671,7 +1671,6 @@ main {
   z-index: 1000;
 }
 #backtotop::after {
-  left:635px;
   content: "\f077";
   font-family: FontAwesome;
   font-weight: normal;
@@ -1681,23 +1680,19 @@ main {
   color: #fff;
 }
 #backtotop:hover {
-  left:635px;
   cursor: pointer;
   background-color: #f63859;
 }
 #backtotop:active {
-  left:635px;
   background-color: #f63859;
 }
 #backtotop.show {
-  left:635px;
   opacity: 1;
   visibility: visible;
 }
 
 @media (min-width: 500px) {
   #backtotop {
-    left:635px;
     margin: 30px;
   }
 }

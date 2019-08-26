@@ -37,13 +37,15 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="content/assets/me/css/style.css">
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" href="content/assets/me/css/customstyle.css">
+    <!-- Box Img css-->
+    <link rel="stylesheet" href="content/assets/me/css/box-img.css">
   </head>
   
   <body>
     <div class="site-wrap">
-      <a href="#" class="offcanvas-toggle js-offcanvas-toggle">Menu</a>
+      <a href="#" class="offcanvas-toggle js-offcanvas-toggle" style="color: #F73859;">Menu</a>
       <div class="offcanvas_menu" id="offcanvas_menu">
         <ul class="mb-5">
           <li class="active ion-planet" style="color: #F73859; font-size: 18px;"><a href="index.html"> LeThanhPhuc</a></li>          
@@ -68,7 +70,6 @@
         Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Noobteam Inc | All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
       </div>
-      <aside style="background-image: url(content/assets/me/img/profile_lethanhphuc.jpg);"></aside>
 
     <main>
       <a href="index.html" class="home-button"><span class="fa fa-home"></span></a>
@@ -87,231 +88,117 @@
           </div>
       </div>  
     </main>
-</div>
-<style>
-
-* {margin: 0; padding: 0;}
-
-html, body {
-height: 100%;
-overflow: hidden;
-}body {
-width: 100%;
-height:100%;
-background: #000;
-background-size: 100%;
-perspective: 600px;
-
-
--moz-user-select: none;
--webkit-user-select: none;
--ms-user-select: none;
--khtml-user-select: none;
-user-select: none;
-
-}
-ul{
-list-style: none;
-}
-li {
-float: left;
-}
-a {
-text-decoration: none;
-}
-nav {
-padding-top: 20px;
-height: 20px;
-}
-nav li {
-width: 50px;
-height: 24px;
-margin-left: 20px;
-text-align: center;
-}
-nav li a {
-display: block;
-width: 100%;
-height: 100%;
-line-height: 24px;
-background-color: #999;
-}
-.stars {
-position: absolute;
-top: 50%;
-left: 50%;
-width: 4px;
-height:4px;
--webkit-border-radius:50%;
--moz-border-radius:50%;
-border-radius:50%;
-animation: fly 3s linear infinite;
-transform-style: preserve-3d;
-
- 
-
-}
-.stars:before, .stars:after {
-content: "";
-position: absolute;
-width: inherit;
-height: inherit;
-box-shadow: inherit;
-}
-.stars:before {
-transform: translateZ(-100px);
-opacity: .6;
-}
-.stars:after {
-transform: translateZ(-600px);
-opacity: .4;
-}
-
-@keyframes fly {
-from {
-transform: translateZ(0px);
-opacity: .6;
-}
-to {
-transform: translateZ(300px);
-opacity: 1;
-}
-}
-
-#perspective{
-perspective: 800px;
-}
-#wrap {
-width: 150px;
-height: 170px;
-margin: 160px auto;
-position: relative;
-transform-style: preserve-3d;
-transform: rotateX(-10deg);
-}
-#wrap img{
-position: absolute;
-top: 0;
-
-width: 120px;
-height: 160px;
-border: 1px solid #333;
-padding: 4px;
-background-color: rgba(200,200,200,0.4);
--webkit-box-reflect: below 10px -webkit-linear-gradient(top ,rgba(0,0,0,0) 40%,rgba(0,0,0,0.5) 100%);
-}
-    </style>
-js:
-<script type="text/javascript">
-
-var w = document.documentElement.clientWidth*1.2;
-var h = document.documentElement.clientHeight*1.2;
-var star = document.getElementsByClassName("stars")[0];
-var n = 1000;
-
-function randomNum(m, n) {
-return Math.floor(Math.random() * (n - m + 1) + m);
-}
-var str = '';
-for (var i = 0; i < n; i++) {
-var numX = randomNum(-w, w);
-var numY = randomNum(-h, h);
-var color = 'rgb(' + randomNum(0, 255) + ',' + randomNum(0, 255) + ',' + randomNum(0, 255) + ')';
-str += numX +'px'+' ' + numY+'px'+' '+ color+',';
-}
-str = str.slice(0,-1);
-star.style.boxShadow = str;var oImg = document.getElementsByTagName("img");
-var oWrap = document.getElementById("wrap");
-var nowX, nowY, lastX, lastY, minusX, minusY, roX = -10, roY = 0;
-(function(i){
-var imgLength = oImg.length;
-var deg = 360/imgLength;
-for (; i < imgLength; i++) {
-oImg[i].style.transform = "rotateY(" + deg*i +"deg) translateZ(300px)";
-};
-})(0);
-document.onmousedown = function(e){
-var e = e || window.event;
-
-lastX = e.clientX;
-lastY = e.clientY;
-
-this.onmousemove = function(e){
-var e = e || window.event;
-nowX = e.clientX;
-nowY = e.clientY;
-
-minusX = nowX - lastX;
-minusY = nowY - lastY;
-console.log(minusX,minusY);
-roY += minusX * 0.15;
-roX -= minusY * 0.15;
-//console.log(roY,roX);
-oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
-
-lastX = nowX;
-lastY = nowY;
-}
-this.onmouseup = function(){
-this.onmousemove = null;
-timer = setInterval(function(){
-minusX *= 0.95;
-minusY *= 0.95;
-roY += minusX * 0.15;
-roX -= minusY * 0.15;
-oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
-if(Math.abs(minusX) < 0.1 || Math.abs(minusY) < 0.1){
-clearInterval(timer);
-}
-}, 1000/60);
-}
-};
-
-
-function touchStart(e){
-e.preventDefault();
-var touch = e.touches[0];
-lastX = touch.pageX;
-lastY = touch.pageY;
-}
-function touchMove(e){
-e.preventDefault();
-var touch = e.touches[0];
-nowX = touch.pageX;
-nowY = touch.pageY;
-minusX = nowX - lastX;
-minusY = nowY - lastY;
-console.log(minusX,minusY);
-roY += minusX * 0.2;
-roX -= minusY * 0.15;
-console.log(roY,roX);
-oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
-
-lastX = nowX;
-lastY = nowY;
-}
-function touchEnd(e){
-e.preventDefault();
-
-timer = setInterval(function(){
-minusX *= 0.95;
-minusY *= 0.95;
-roY += minusX * 0.15;
-roX -= minusY * 0.15;
-oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
-if(Math.abs(minusX) < 0.1 || Math.abs(minusY) < 0.1){
-clearInterval(timer);
-}
-}, 1000/60);
-}
-
-document.addEventListener('touchstart', touchStart, false);
-document.addEventListener('touchmove', touchMove, false);
-document.addEventListener('touchend', touchEnd, false);
-</script>
+  </div>
     <!-- loader --> 
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-   
+    
+    <!-- Box Img script -->
+    <script type="text/javascript">
+      var w = document.documentElement.clientWidth*1.2;
+      var h = document.documentElement.clientHeight*1.2;
+      var star = document.getElementsByClassName("stars")[0];
+      var n = 1000;
+
+      function randomNum(m, n) {
+      return Math.floor(Math.random() * (n - m + 1) + m);
+      }
+      var str = '';
+      for (var i = 0; i < n; i++) {
+      var numX = randomNum(-w, w);
+      var numY = randomNum(-h, h);
+      var color = 'rgb(' + randomNum(0, 255) + ',' + randomNum(0, 255) + ',' + randomNum(0, 255) + ')';
+      str += numX +'px'+' ' + numY+'px'+' '+ color+',';
+      }
+      str = str.slice(0,-1);
+      star.style.boxShadow = str;var oImg = document.getElementsByTagName("img");
+      var oWrap = document.getElementById("wrap");
+      var nowX, nowY, lastX, lastY, minusX, minusY, roX = -10, roY = 0;
+      (function(i){
+      var imgLength = oImg.length;
+      var deg = 360/imgLength;
+      for (; i < imgLength; i++) {
+      oImg[i].style.transform = "rotateY(" + deg*i +"deg) translateZ(300px)";
+      };
+      })(0);
+      document.onmousedown = function(e){
+      var e = e || window.event;
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+
+      this.onmousemove = function(e){
+      var e = e || window.event;
+      nowX = e.clientX;
+      nowY = e.clientY;
+
+      minusX = nowX - lastX;
+      minusY = nowY - lastY;
+      console.log(minusX,minusY);
+      roY += minusX * 0.15;
+      roX -= minusY * 0.15;
+      //console.log(roY,roX);
+      oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
+
+      lastX = nowX;
+      lastY = nowY;
+      }
+      this.onmouseup = function(){
+      this.onmousemove = null;
+      timer = setInterval(function(){
+      minusX *= 0.95;
+      minusY *= 0.95;
+      roY += minusX * 0.15;
+      roX -= minusY * 0.15;
+      oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
+      if(Math.abs(minusX) < 0.1 || Math.abs(minusY) < 0.1){
+      clearInterval(timer);
+      }
+      }, 1000/60);
+      }
+      };
+
+
+      function touchStart(e){
+      e.preventDefault();
+      var touch = e.touches[0];
+      lastX = touch.pageX;
+      lastY = touch.pageY;
+      }
+      function touchMove(e){
+      e.preventDefault();
+      var touch = e.touches[0];
+      nowX = touch.pageX;
+      nowY = touch.pageY;
+      minusX = nowX - lastX;
+      minusY = nowY - lastY;
+      console.log(minusX,minusY);
+      roY += minusX * 0.2;
+      roX -= minusY * 0.15;
+      console.log(roY,roX);
+      oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
+
+      lastX = nowX;
+      lastY = nowY;
+      }
+      function touchEnd(e){
+      e.preventDefault();
+
+      timer = setInterval(function(){
+      minusX *= 0.95;
+      minusY *= 0.95;
+      roY += minusX * 0.15;
+      roX -= minusY * 0.15;
+      oWrap.style.transform = 'rotateX(' + roX + 'deg) rotateY(' + roY +'deg)';
+      if(Math.abs(minusX) < 0.1 || Math.abs(minusY) < 0.1){
+      clearInterval(timer);
+      }
+      }, 1000/60);
+      }
+
+      document.addEventListener('touchstart', touchStart, false);
+      document.addEventListener('touchmove', touchMove, false);
+      document.addEventListener('touchend', touchEnd, false);
+    </script>
     <!-- home script -->
     <script src="content/assets/me/js/jquery-3.2.1.min.js"></script>
     <script src="content/assets/me/js/popper.min.js"></script>

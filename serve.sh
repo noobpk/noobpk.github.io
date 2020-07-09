@@ -1,1 +1,1 @@
-bundle install & bundle exec jekyll serve
+bundler update --bundler & bundle install & bundle exec jekyll serve

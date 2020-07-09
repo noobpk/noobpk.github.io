@@ -1,0 +1,199 @@
+<section data-id="resume" class="animated-section">
+                <div class="page-title">
+                  <h2>Resume</h2>
+                </div>
+
+                <div class="section-content">
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+
+                      <div class="block-title">
+                        <h3>Education</h3>
+                      </div>
+                      
+                      <div class="timeline timeline-second-style clearfix">
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">2019</h5>
+                            <span class="item-company">HCM University Of Technology (HUTECH)</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Information Technology</h4>
+                            <i>Major: Information Security</i>
+                            <p>Study well specialized subjects such as computer network safety, information security for web applications. Build labs on system attacks and pentest for web applications. Participate in national CTF contests for the school's club.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="white-space-50"></div>
+
+                      <div class="block-title">
+                        <h3>Experience</h3>
+                      </div>
+
+                      <div class="timeline timeline-second-style clearfix">
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Jun 2019- Current</h5>
+                            <span class="item-company">HPT Vietnam Corporation</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Technical - Information Security</h4>
+                            <p>Join pentest for projects in the fields: government agencies, banks, insurance, e-wallets, e-commerce,...</p>
+                            <p>Deploy application security such as Fortify SSC, SCA and Security services.</p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Mar 2019 - May 2019</h5>
+                            <span class="item-company">HPT Vietnam Corporation</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Internship Trainee</h4>
+                            <p>Train about Pentest web application, Exploit Vuln, ...</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Skills & Certificates -->
+                    <div class="col-xs-12 col-sm-5">
+                      <!-- Pentest Skills -->
+                      <div class="block-title">
+                        <h3>Pentest <span>Skills</span></h3>
+                      </div>
+                      <div class="skills-info skills-second-style">
+                        {% for item in site.pentestskill %}
+                          {%- assign title = item.title | default: node.title -%} 
+                          {%- assign value = item.value | default: node.value -%}
+                          {%- assign icon = item.icon | default: node.icon -%}
+                        <div class="skill clearfix">
+                          <h4>{{ title }}</h4>
+                          <div class="skill-value">{{ value }}</div>
+                        </div>
+                        <div class="skill-container {{ icon }}">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                      <!-- End of Pentest Skills -->
+
+                      <div class="white-space-10"></div>
+
+                      <!-- Coding Skills -->
+                      <div class="block-title">
+                        <h3>Coding <span>Skills</span></h3>
+                      </div>
+
+                      <div class="skills-info skills-second-style">
+                        {% for item in site.codeskill %}
+                          {%- assign title = item.title | default: node.title -%} 
+                          {%- assign value = item.value | default: node.value -%}
+                          {%- assign icon = item.icon | default: node.icon -%}
+                        <div class="skill clearfix">
+                          <h4>{{ title }}</h4>
+                          <div class="skill-value">{{ value }}</div>
+                        </div>
+                        <div class="skill-container {{ icon }}">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                      <!-- End of Coding Skills -->
+
+                      <div class="white-space-10"></div>
+
+                      <!-- Knowledges -->
+                      <div class="block-title">
+                        <h3>Knowledges</h3>
+                      </div>
+
+                      <ul class="knowledges">
+                        {% for item in site.knowledges %}
+                          {%- assign title = item.title | default: node.title -%} 
+                        <li>{{ title }}</li>
+                        {% endfor %}
+                      </ul>
+                      <!-- End of Knowledges -->
+                    </div>
+                    <!-- End of Skills & Certificates -->
+                  </div>
+
+                  <div class="white-space-50"></div>
+
+                  <!-- Certificates -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Certificates</h3>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                  {% for item in site.certificate %}
+                    {%- assign title = item.title | default: node.title -%}
+                    {%- assign id = item.id | default: node.id -%} 
+                    {%- assign issuedate = item.issuedate | default: node.issuedate -%} 
+                    {%- assign expirationdate = item.expirationdate | default: node.expirationdate -%}
+                    {%- assign urlcredential = item.urlcredential | default: node.urlcredential -%}
+                    {%- assign logo = item.logo | default: node.logo -%}   
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="{{ logo }}" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>{{ title }}</h4>
+                          </div>
+                          <div class="certi-id">
+                            <span>Credential ID: {{ id }}</span>
+                          </div>
+                          <div class="certi-date">
+                            <span>{{ issuedate }} - {{ expirationdate }}</span>
+                          </div>
+                          <div class="certi-credential">
+                            <span><a href="{{ urlcredential }}" class="lnr lnr-eye" target="_blank"></a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <!-- End of Certificates -->
+                  <div class="white-space-30"></div>
+                  <!-- Researches -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Researches</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="clients owl-carousel">
+                        {% for item in site.research %}
+                          {%- assign title = item.title | default: node.title -%}
+                          {%- assign url = item.url | default: node.url -%}
+                          {%- assign img = item.img | default: node.img -%}
+                        <div class="client-block">
+                          <a href="{{ url }}" title="{{ title }}">
+                            <img src="{{ img }}" alt="{{ title }}">
+                          </a>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Researches -->
+                </div>
+              </section>

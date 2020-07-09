@@ -1,0 +1,10 @@
+{% if include.menu %}
+<ul>
+	{% for item in include.menu %}
+    	{%- assign url = item.url | default: node.url -%}
+    	{%- assign title = item.title | default: node.title -%}	
+    	{%- assign icon = item.icon | default: node.icon -%}	
+	<li><a href="{{ url | relative_url }}" target="_blank"><i class="{{ icon }}"></i></a></li>
+    {% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,19 @@
+{% if include.menu %}
+<li class="active">
+                <a href="#home" class="nav-anim">
+                  <span class="menu-icon lnr lnr-home"></span>
+                  <span class="link-text">Home</span>
+                </a>
+              </li>
+                {% for item in include.menu %}
+                    {%- assign url = item.url | default: node.url -%}
+                    {%- assign title = item.title | default: node.title -%} 
+                    {%- assign icon = item.icon | default: node.icon -%}
+              <li>
+                <a href="{{ url }}" class="nav-anim">
+                  <span class="menu-icon lnr {{ icon }}"></span>
+                  <span class="link-text">{{ title }}</span>
+                </a>
+              </li>
+                 {% endfor %}
+{% endif %}

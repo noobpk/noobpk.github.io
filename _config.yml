@@ -1,0 +1,95 @@
+title: "LeThanhPhuc Profile | Noobpk"
+author: "#pk"
+description: "LeThanhPhuc Profile | Noobpk"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
+
+# Layout
+
+sidebar: true               # show a sidebar instead of the usual header
+show_excerpts: true          # show article excerpts on the home page
+show_related: true           # show the previous and next links after every post
+show_description: true       # show the site description in the sidebar
+show_title: false            # always keep the site title visible
+
+# Styling
+
+#dark_header: true            # always keep the header dark
+#minimal: false               # use simpler style
+
+# Menu
+navigation:
+  # - {title: "Home", icon: lnr-home, url: "#home"}
+  - {title: "About Me", icon: lnr-user, url: "#about-me"}
+  - {title: "Resume", icon: lnr-graduation-hat, url: "#resume"}
+  # - {title: "Portfolio", icon: lnr-briefcase, url: "#portfolio"}
+  - {title: "Blog", icon: lnr-book, url: "#blog"}
+  - {title: "Contact", icon: lnr-envelope, url: "#contact"}
+
+
+external:
+  - {title: "Github", icon: fab fa-github, url: "https://github.com/noobpk"}
+  - {title: "LinkedIn", icon: fab fa-linkedin-in, url: "https://www.linkedin.com/in/ltp-noobpk"}
+  - {title: "Medium", icon: fab fa-medium, url: "https://medium.com/@lethanhphuc.pk"}
+
+pentestskill:
+  - {title: "Web Pentest", value: 85%, icon: skill-4}
+  - {title: "Mobile Pentest", value: 85%, icon: skill-4}
+  - {title: "Api WebService Pentest", value: 80%, icon: skill-6}
+  - {title: "Source Code Review", value: 70%, icon: skill-3}
+
+codeskill:
+  - {title: "PHP", value: 85%, icon: skill-4}
+  - {title: "Java", value: 65%, icon: skill-2}
+  - {title: "Python", value: 75%, icon: skill-3}
+  - {title: "JavaScript", value: 75%, icon: skill-3}
+
+knowledges:
+  - title: "Web Exploits"
+  - title: "Owasp Projects"
+  - title: "Network"
+  - title: "OS (Linux, Windows, etc.)"
+  - title: "Social Engineering"
+  - title: "Mobile Platforms"
+
+certificate:
+  - {title: "eLearnSecurity Junior Penetration Tester", id: "7017555", issuedate: June 2020, expirationdate: No Expiration Date, urlcredential: "https://verified.elearnsecurity.com/certificates/ca7c44d5-c65a-417b-9721-75db4738be97", logo: "/assets/img/els_logo.png"}
+  - {title: "eLearnSecurity Mobile Application Penetration Tester", id: "3815049", issuedate: June 2020, expirationdate: No Expiration Date, urlcredential: "https://verified.elearnsecurity.com/certificates/1599fe0d-e71a-4bcb-8015-94fb80923a44", logo: "/assets/img/els_logo.png"}
+  - {title: Application Security and Secure Coding Training course in "Android", id: "028xxe6", issuedate: May 2020, expirationdate: May 2021, urlcredential: "https://certificates.codebashing.com/android_course_certificate_02899f569c9b5e6e22e286c5f5a3c69330e15ee6.pdf", logo: "/assets/img/codebashing_logo.png"}
+  - {title: Application Security and Secure Coding Training course in "iOS"", id: "59exx66", issuedate: May 2020, expirationdate: May 2021, urlcredential: "https://certificates.codebashing.com/ios_course_certificate_59e8517e491b637464a896db9a409779abb2c566.pdf", logo: "/assets/img/codebashing_logo.png"}
+  - {title: Application Security and Secure Coding Training course in "Java Advanced", id: "9fcxx6f", issuedate: Jun 2020, expirationdate: Jun 2021, urlcredential: "https://certificates.codebashing.com/java_advanced_lessons_course_certificate_9fc6301541e70e4450dbe34ac9e972c9ada4af6f.pdf", logo: "/assets/img/codebashing_logo.png"}
+  - {title: Application Security and Secure Coding Training course in ".NET Advanced", id: "191xxda", issuedate: Jun 2020, expirationdate: Jun 2021, urlcredential: "https://certificates.codebashing.com/dotnet_advanced_lessons_course_certificate_191e0640702dadaf6db4246409a72a9e3841f8da", logo: "/assets/img/codebashing_logo.png"}
+  - {title: "Information Security Awareness - Foundational", id: "2846787", issuedate: June 2020, expirationdate: June 2023, urlcredential: "/assets/me/certificate/UNDSS/Information_Security_Awareness_Foundational.pdf", logo: "/assets/img/undss_logo.png"}
+  - {title: "Information Security Awareness - Advanced", id: "2846892", issuedate: June 2020, expirationdate: June 2023, urlcredential: "/assets/me/certificate/UNDSS/Information_Security_Awareness_Advanced.pdf", logo: "/assets/img/undss_logo.png"}
+
+research:
+  - {title: "BugCrowd" ,url: "#", img: "/assets/img/bugcrowd_logo.png"}
+  - {title: "Codebashing" ,url: "#", img: "/assets/img/codebashing_logo.png"}
+  - {title: "eLearnSecurity" ,url: "#", img: "/assets/img/els_logo_200.png"}
+  - {title: "Github" ,url: "", img: "/assets/img/github_logo.png"}
+  - {title: "HackerOne" ,url: "#", img: "/assets/img/hackerone_logo.png"}
+  - {title: "Udemy" ,url: "#", img: "/assets/img/udemy_logo.png"}
+  - {title: "Undss" ,url: "#", img: "/assets/img/undss_logo.png"}
+blog:
+  - {title: "[BugNotBounty] Missing Authentication in TheCoffeeHouse Api", url: "https://medium.com/p/1f5e5e2e5993", tag: BugBounty, img: "https://miro.medium.com/max/1400/1*wqv7lVq4IMq4yhR0FypAuw.png", pubDate: "Tue, 31 Mar 2020"}
+  - {title: "Auto Change Tor Ip", url: "https://medium.com/p/3b16823054c6", tag: Tool, url: "https://medium.com/p/3b16823054c6", img: "https://miro.medium.com/max/1400/1*pQqB7Qgf9FOZ3hLl3e6I5w.png", pubDate: "Sat, 25 Jan 2020"}
+  - {title: "How did I download all #data of the website using API from Google Sheet", tag: BugBounty, url: "https://medium.com/p/df6d4a514cc0", img: "https://miro.medium.com/max/1400/1*G0D3cQ6iN7oEwbXrXJ1sLQ.png", pubDate: "Tue, 04 Jun 2019"}
+  - {title: "What tools kit to bring when you went to pentest WebApp", tag: Tool, url: "https://medium.com/p/6aa41a65a361", img: "https://miro.medium.com/max/1400/1*I_umNFUUP9TefrRj6TOD6w.png", pubDate: "Fri, 31 May 2019"}
+  - {title: "Second Order SQL Injection Explained with Example", tag: LabExploit , url: "https://medium.com/p/f67fb199f5e5", img: "https://miro.medium.com/max/1400/1*M2w3A9oCBJ1pKG-MIT2V4Q.png", pubDate: "Mon, 27 May 2019"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

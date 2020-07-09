@@ -1,0 +1,42 @@
+<section data-id="blog" class="animated-section">
+                <div class="page-title">
+                  <h2>Blog</h2>
+                </div>
+
+                <div class="section-content">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="blog-masonry two-columns clearfix">
+                      <!-- Blog Post -->
+                        {% for item in site.blog %}
+                          {%- assign title = item.title | default: node.title -%} 
+                          {%- assign url = item.url | default: node.url -%}
+                          {%- assign tag = item.tag | default: node.tag -%} 
+                          {%- assign img = item.img | default: node.img -%} 
+                          {%- assign pubDate = item.pubDate | default: node.pubDate -%} 
+                        <div class="item post-1">
+                          <div class="blog-card">
+                            <div class="media-block">
+                              <div class="category">
+                                <a href="#" title="View all posts in Design">{{ tag }}</a>
+                              </div>
+                              <a href="{{ url }}" target="_blank">
+                                <img src="{{ img }}" class="size-blog-masonry-image-two-c" alt="{{ title }}" title="" />
+                                <div class="mask"></div>
+                              </a>
+                            </div>
+                            <div class="post-info">
+                              <div class="post-date">{{ pubDate }}</div>
+                              <a href="{{ url }}" target="_blank">
+                                <h4 class="blog-item-title">{{ title }}</h4>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        {% endfor %}
+                        <!-- End of Blog Post -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>

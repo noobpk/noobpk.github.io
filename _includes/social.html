@@ -5,6 +5,10 @@
     	{%- assign title = item.title | default: node.title -%}	
     	{%- assign icon = item.icon | default: node.icon -%}	
 	<li><a href="{{ url | relative_url }}" target="_blank"><i class="{{ icon }}"></i></a></li>
-    {% endfor %}
+    {% endfor %} 
+</ul>
+<ul>
+    <li><a href="https://bugcrowd.com/noobpk" target="_blank"><img class="better-avatar bugcrowd" src="/assets/img/bugcrowd_mark_white.png"></a></li>
+    <li><a href="https://hackerone.com/noobpk" target="_blank"><img class="better-avatar h1" src="/assets/img/h1_mark_white.png"></a></li>
 </ul>
 {% endif %}

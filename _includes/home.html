@@ -8,14 +8,13 @@
                       <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="title-block">
                           <h2>Le Thanh Phuc</h2>
-                          <div class="owl-carousel text-rotation">                                    
+                          <div class="owl-carousel text-rotation">  
+                            {% for item in site.doing %}
+                              {%- assign title = item.title | default: node.title -%}                                   
                             <div class="item">
-                              <div class="sp-subtitle">Web/Mobile Application Pentester</div>
+                              <div class="sp-subtitle">{{ title }}</div>
                             </div>
-                            
-                            <div class="item">
-                              <div class="sp-subtitle">Bughunter</div>
-                            </div>
+                            {% endfor %}
                           </div>
                         </div>
                       </div>

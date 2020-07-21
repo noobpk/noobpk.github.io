@@ -34,6 +34,11 @@ external:
   - {title: "LinkedIn", icon: fab fa-linkedin-in, url: "https://www.linkedin.com/in/ltp-noobpk"}
   - {title: "Medium", icon: fab fa-medium, url: "https://medium.com/@lethanhphuc.pk"}
 
+doing:
+  - title: "Web Application Pentester"
+  - title: "Mobile Application Pentester"
+  - title: BugBounty Researcher
+
 pentestskill:
   - {title: "Web Pentest", value: 85%, icon: skill-4}
   - {title: "Mobile Pentest", value: 85%, icon: skill-4}

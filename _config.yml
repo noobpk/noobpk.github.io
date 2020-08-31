@@ -80,13 +80,13 @@ research:
   - {title: "Udemy" ,url: "#", img: "/assets/img/udemy_logo.png"}
   - {title: "Undss" ,url: "#", img: "/assets/img/undss_logo.png"}
 blog:
+  - {title: "[Bugbounty] Multiple Bug Found on NCOVID Mobile Application", tag: BugBounty , url: "https://medium.com/p/609fa3468388", img: "https://miro.medium.com/fit/c/640/192/1*0jYq_hR9G40J41cfhCfHDw.png", pubDate: "Mon, 31 Aug 2020"}
   - {title: "Frida iOS Hook", url: "https://medium.com/p/5bb5c6b327a2", tag: Tool, img: "https://miro.medium.com/fit/c/1400/420/1*vilSj-pscOSnOYCjxPNiEw.png", pubDate: "Wed, 22 Jul 2020"}
   - {title: "[BugNotBounty] Missing Authentication in TheCoffeeHouse Api", url: "https://medium.com/p/1f5e5e2e5993", tag: BugBounty, img: "https://miro.medium.com/max/1400/1*wqv7lVq4IMq4yhR0FypAuw.png", pubDate: "Tue, 31 Mar 2020"}
   - {title: "Auto Change Tor Ip", url: "https://medium.com/p/3b16823054c6", tag: Tool, url: "https://medium.com/p/3b16823054c6", img: "https://miro.medium.com/max/1400/1*pQqB7Qgf9FOZ3hLl3e6I5w.png", pubDate: "Sat, 25 Jan 2020"}
   - {title: "How did I download all #data of the website using API from Google Sheet", tag: BugBounty, url: "https://medium.com/p/df6d4a514cc0", img: "https://miro.medium.com/max/1400/1*G0D3cQ6iN7oEwbXrXJ1sLQ.png", pubDate: "Tue, 04 Jun 2019"}
   - {title: "What tools kit to bring when you went to pentest WebApp", tag: Tool, url: "https://medium.com/p/6aa41a65a361", img: "https://miro.medium.com/max/1400/1*I_umNFUUP9TefrRj6TOD6w.png", pubDate: "Fri, 31 May 2019"}
   - {title: "Second Order SQL Injection Explained with Example", tag: LabExploit , url: "https://medium.com/p/f67fb199f5e5", img: "https://miro.medium.com/max/1400/1*M2w3A9oCBJ1pKG-MIT2V4Q.png", pubDate: "Mon, 27 May 2019"}
-
 
 
 

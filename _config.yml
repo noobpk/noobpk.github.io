@@ -40,13 +40,14 @@ doing:
   - title: BugBounty Researcher
 
 pentestskill:
+  - {title: "System Pentest", value: 85%, icon: skill-4}
   - {title: "Web Pentest", value: 85%, icon: skill-4}
-  - {title: "Mobile Pentest", value: 85%, icon: skill-4}
+  - {title: "Mobile Pentest", value: 80%, icon: skill-6}
   - {title: "Api WebService Pentest", value: 80%, icon: skill-6}
   - {title: "Source Code Review", value: 70%, icon: skill-3}
 
 codeskill:
-  - {title: "PHP", value: 85%, icon: skill-4}
+  - {title: "PHP", value: 80%, icon: skill-4}
   - {title: "Java", value: 65%, icon: skill-2}
   - {title: "Python", value: 75%, icon: skill-3}
   - {title: "JavaScript", value: 75%, icon: skill-3}
@@ -77,6 +78,7 @@ research:
   - {title: "eLearnSecurity" ,url: "#", img: "/assets/img/els_logo_200.png"}
   - {title: "Github" ,url: "", img: "/assets/img/github_logo.png"}
   - {title: "HackerOne" ,url: "#", img: "/assets/img/hackerone_logo.png"}
+  - {title: "HackerOne" ,url: "#", img: "/assets/img/htb_logo.png"}
   - {title: "Udemy" ,url: "#", img: "/assets/img/udemy_logo.png"}
   - {title: "Undss" ,url: "#", img: "/assets/img/undss_logo.png"}
 blog:

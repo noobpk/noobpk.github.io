@@ -37,7 +37,8 @@ external:
 doing:
   - title: "Web Application Pentester"
   - title: "Mobile Application Pentester"
-  - title: BugBounty Researcher
+  - title: "System Pentester"
+  - title: "BugBounty Researcher"
 
 pentestskill:
   - {title: "System Pentest", value: 85%, icon: skill-4}
